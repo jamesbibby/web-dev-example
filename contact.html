@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Twin Cities Animal Rescue | Contact</title> 
+    </head>
+    <body>
+        <header>
+            <img src="images/rescue-logo_c.png" alt="Twin Cities Animal Rescue Logo" width="100" height="92">
+            <nav aria-label="Primary">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html" aria-current="page">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h1>Get Involved</h1>
+            <p>Ready to make a difference? Tell us a little about yourself and how you'd like to help, and our volunteer coordinator will reach out within three business days.</p>
+            <section>
+                <h2>Volunteer, Foster and Adoption Interest Form</h2>
+                <form method="post" action="#">
+                    <fieldset>
+                        <legend>Contact Information</legend>
+                        <p><label for="name">Full Name</label></p>
+                        <input type="text" id="name" name="name" autocomplete="name" required>
+                        <p><label for="email">Email Address</label></p>
+                        <input type="email" id="email" name="email" autocomplete="email" required>
+                    </fieldset>
+                    <fieldset>
+                        <legend>How would you like to help?</legend>
+                        <label><input type="radio" name="interest" value="volunteering" required> Volunteering</label>
+                        <label><input type="radio" name="interest" value="fostering"> Fostering</label>
+                        <label><input type="radio" name="interest" value="adoption"> Adoption</label>
+                        <label><input type="radio" name="interest" value="other"> Other</label>
+                    </fieldset>
+                    <fieldset>
+                        <legend>When are you available?</legend>
+                        <label>
+                            <input type="checkbox" name="available" value="weekday_am"> Weekday Mornings
+                        </label>
+                        <label>
+                            <input type="checkbox" name="available" value="weekday_pm"> Weekday Afternoons
+                        </label>
+                        <label>
+                            <input type="checkbox" name="available" value="weekend_am"> Weekend Mornings
+                        </label>
+                        <label>
+                            <input type="checkbox" name="available" value="weekend_pm"> Weekend Afternoons
+                        </label>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Tell us about yourself</legend>
+                        <p><label for="experience">Experience with pets:</label></p>
+                        <select id="experience" name="experience" required>
+                            <option value="">-- Select an option --</option>
+                            <option value="none">None yet, but eager to learn</option>
+                            <option value="some">Some, such as owning a family pet</option>
+                            <option value="lots">Extensive, such as fostering, shelter work or professional care</option>
+                        </select>
+                        <p><label for="message">Anything else you'd like us to know?</label></p>
+                        <p id="message-hint">Optional, up to 500 characters. For example, other pets in your home or roles you're interested in.</p>
+                        <textarea id="message" name="message" rows="5" cols="40" maxlength="500" aria-describedby="message-hint"></textarea>
+                    </fieldset>
+                    <button type="submit">Send Message</button>
+                </form>
+            </section>
+            <section>
+                <h2>Service Area</h2>
+                <ul>
+                    <li>Minneapolis</li>
+                    <li>St. Paul</li>
+                    <li>Bloomington</li>
+                    <li>Edina</li>
+                    <li>Roseville</li>
+                    <li>Maplewood</li>
+                    <li>Richfield</li>
+                    <li>St. Louis Park</li>
+                </ul>
+                <p>Live just outside these areas? Reach out anyway. We often work with neighboring communities.</p>
+            </section>
+            <section>
+                <h2>Office Hours</h2>
+                <table>
+                    <caption>Our offices are open at the following times:</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Day</th>
+                            <th scope="col">Hours</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Monday-Friday</th>
+                            <td>10:00 AM - 6:00 PM</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Saturday</th>
+                            <td>9:00 AM - 4:00 PM (adoption events)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Sunday</th>
+                            <td>By Appointment Only</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>We're closed on major holidays. Foster families can reach our 24/7 support line at any time.</p>
+            </section>
+            <section>
+                <h2>Contact Details</h2>
+                <address>
+                    Twin Cities Animal Rescue<br>
+                    1234 Rescue Lane, Suite 100<br>
+                    Minneapolis, MN 55401<br>
+                    Phone: <a href="tel:+16125550147">(612) 555-0147</a><br>
+                    Email: <a href="mailto:hello@twincitiesrescue.example">hello@twincitiesrescue.example</a>
+                </address>
+            </section>
+        </main>
+        <footer>
+            <hr>
+            <p>&copy; 2026 Twin Cities Animal Rescue · A 501(c)(3) nonprofit organization · Minneapolis-St. Paul, Minnesota</p>
+        </footer>
+    </body>
+</html>
