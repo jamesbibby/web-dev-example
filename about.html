@@ -4,11 +4,15 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Twin Cities Animal Rescue | About</title> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Inter:opsz,wght@14..32,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
         <header>
             <img src="images/rescue-logo_c.png" alt="Twin Cities Animal Rescue Logo" width="100" height="92">
-            <nav aria-label="Primary">
+            <nav class="primary-nav" aria-label="Primary">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html" aria-current="page">About</a></li>
@@ -26,14 +30,17 @@
                 <p>Today we're a volunteer-powered nonprofit with more than 300 foster families across Minneapolis, St. Paul and the surrounding suburbs. We don't operate a traditional shelter. Instead, every animal in our care lives in a real home, where it gets one-on-one attention while it waits for its forever family.</p>
                 <p>Our goal hasn't changed since day one: every adoptable animal deserves a safe place to land and a second chance at a happy life.</p>
             </section>
-            <section>
+            <section class="feature card">
                 <h2>Pet Spotlight</h2>
-                <figure>
+                <figure class="spotlight">
                     <img src="images/rescue-pet-spotlight_c.png"
                     alt="an adorably mischievous looking young male tabby poses for the camera"
                     width="300"
                     height="300">
-                    <figcaption>Meet Horace, a curious two-year-old tabby who came to us as a shy stray in a Saint Paul alley. After three months with his foster family, he's learned to love window-watching, feather toys and lap naps. He's ready for a patient home where he can be the center of attention.</figcaption>
+                    <figcaption>
+                        <h3>Horace</h3>
+                        <p>Meet Horace, a curious two-year-old tabby who came to us as a shy stray in a Saint Paul alley. After three months with his foster family, he's learned to love window-watching, feather toys and lap naps. He's ready for a patient home where he can be the center of attention.</p>
+                    </figcaption>
                 </figure>
             </section>
             <section>
@@ -46,12 +53,12 @@
                     Your browser does not support the audio element.
                     If you wish to hear the director's message please <a href="assets/audio/rescue-message_c.mp3" download>download the audio (MP3 292KB)</a>.
                 </audio>
-                <details>
+                <details class="transcript">
                     <summary>Read the transcript</summary>
                     <p><strong>Director:</strong> Every animal deserves a loving home. Whether you want to adopt, foster, or volunteer, there's a place for you here. Let's find the perfect match.</p>
                 </details>
             </section>
-            <section>
+            <section class="feature">
                 <h2>Our Core Values</h2>
                 <dl>
                     <dt>Compassion</dt>
@@ -66,25 +73,24 @@
                     <dd>No animal is a lost cause. We believe in second chances.</dd>
                 </dl>
             </section>
-            <section>
+            <section class="feature">
                 <h2>Our Partners</h2>
                 <dl>
                     <dt>Lakeside Veterinary Clinic</dt>
-                    <dd>discounted medical care and spay and neuter surgeries</dd>
+                    <dd>Discounted medical care and spay and neuter surgeries</dd>
                     <dt>North Loop Pet Supply</dt>
-                    <dd>food and supply donations, plus space for weekend adoption events</dd>
+                    <dd>Food and supply donations, plus space for weekend adoption events</dd>
                     <dt>Mississippi River Dog Training</dt>
-                    <dd>free training sessions for new adopters</dd>
+                    <dd>Free training sessions for new adopters</dd>
                     <dt>Metro Pet Food Shelf</dt>
-                    <dd>pet food assistance for families in need</dd>
+                    <dd>Pet food assistance for families in need</dd>
                     <dt>Twin Cities Community Foundation</dt>
-                    <dd>grant funding for our foster program</dd>
+                    <dd>Grant funding for our foster program</dd>
                 </dl>
                 <p>Interested in partnering with us? <a href="contact.html">Contact us</a> to learn how your organization can help.</p>
             </section>
         </main>
         <footer>
-            <hr>
             <p>&copy; 2026 Twin Cities Animal Rescue · A 501(c)(3) nonprofit organization · Minneapolis-St. Paul, Minnesota</p>
         </footer>
     </body>

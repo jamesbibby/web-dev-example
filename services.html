@@ -3,12 +3,16 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Twin Cities Animal Rescue | Services</title> 
+        <title>Twin Cities Animal Rescue | Services</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Inter:opsz,wght@14..32,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
         <header>
             <img src="images/rescue-logo_c.png" alt="Twin Cities Animal Rescue Logo" width="100" height="92">
-            <nav aria-label="Primary">
+            <nav class="primary-nav" aria-label="Primary">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
@@ -20,64 +24,77 @@
         <main>
             <h1>Our Programs</h1>
             <p>Whether you're ready to adopt, can open your home for a few weeks, or have a few hours to give, there's a place for you in our rescue family.</p>
+            <video
+                width="360"
+                height="190"
+                controls
+                autoplay
+                muted
+                playsinline>
+                <source src="assets/video/rescue-adoption-1280.webm" type="video/webm">
+                <source src="assets/video/rescue-adoption-1280.mp4" type="video/mp4">
+                Your browser does not support the video element. 
+                If you wish to see this video of a family enjoying time in the park with their adopted dog you can <a href="assets/video/rescue-adoption-1280.mp4" download>download the video (MP4 4.5MB)</a>.
+            </video>
             <section id="adoption">
                 <h2>Adoption Process</h2>
-                <video
-                    width="360"
-                    height="190"
-                    controls
-                    autoplay
-                    muted
-                    playsinline>
-                    <source src="assets/video/rescue-adoption-1280.webm" type="video/webm">
-                    <source src="assets/video/rescue-adoption-1280.mp4" type="video/mp4">
-                    Your browser does not support the video element. 
-                    If you wish to see this video of a family enjoying time in the park with their adopted dog you can <a href="assets/video/rescue-adoption-1280.mp4" download>download the video (MP4 4.5MB)</a>.
-                </video>
-                <ol>
-                    <li><strong>Browse:</strong> Meet our adoptable animals online or at a weekend adoption event.</li>
-                    <li><strong>Apply:</strong> Complete a short adoption application so we can learn about your home and lifestyle.</li>
-                    <li><strong>Meet and greet:</strong> Spend time with the animal to make sure it's a good match for everyone, including current pets.</li>
-                    <li><strong>Home check:</strong> A volunteer visits, or video-calls, to help you prepare a safe space.</li>
-                    <li><strong>Welcome home:</strong> Sign the adoption agreement, pay the adoption fee, and start your new life together.</li>
+                <ol class="adopt-card-list card-list">
+                    <li class="adopt-card card"><strong>Browse</strong><p>Meet our adoptable animals online or at a weekend adoption event.</p></li>
+                    <li class="adopt-card card"><strong>Apply</strong><p>Complete a short adoption application so we can learn about your home and lifestyle.</p></li>
+                    <li class="adopt-card card"><strong>Meet and greet</strong><p>Spend time with the animal to make sure it's a good match for everyone, including current pets.</p></li>
+                    <li class="adopt-card card"><strong>Home check</strong><p>A volunteer visits, or video-calls, to help you prepare a safe space.</p></li>
+                    <li class="adopt-card card"><strong>Welcome home</strong><p>Sign the adoption agreement, pay the adoption fee, and start your new life together.</p></li>
                 </ol>
-                <p>Adoption fees range from $25 to $250 and include spay or neuter surgery, vaccinations and a microchip.</p>
-                <h3>Featured Animal</h3>
-                <h4>Peanut</h4>
-                <img src="images/rescue-pet_c.png" alt="closeup of an adorable red guinea pig" width="360" height="360">
-                <p>Peanut is an adorable young guinea pig who enjoys cuddles and cucumbers.</p>
+                <p><i>* Adoption fees range from $25 to $250 and include spay or neuter surgery, vaccinations and a microchip.</i></p>
+            </section>
+            <section class="feature card">
+                <h2>Pet Spotlight</h2>
+                <figure class="spotlight">
+                    <img src="images/rescue-pet_c.png" alt="closeup of an adorable red guinea pig" width="300" height="300">
+                    <figcaption>
+                        <h3>Peanut &#x1F95C;</h3>
+                        <p>Peanut is an adorable young guinea pig who enjoys cuddles and cucumbers.</p>
+                    </figcaption>
+                </figure>
             </section>
             <section id="foster">
                 <h2>Foster Program</h2>
                 <p>Foster homes are the heart of our rescue. When you foster, you give an animal a safe place to recover, gain confidence and get ready for adoption, and you free up space so we can save another life.</p>
-                <h3>What foster families provide:</h3>
-                <ul>
-                    <li>A safe, loving temporary home, usually for two to eight weeks</li>
-                    <li>Daily care, attention and gentle socialization</li>
-                    <li>Transportation to vet visits and adoption events, when possible</li>
-                </ul>
-                <h3>What we provide:</h3>
-                <ul>
-                    <li>All food, supplies and veterinary care at no cost</li>
-                    <li>Training and a dedicated foster coordinator</li>
-                    <li>24/7 support for emergencies</li>
+                <ul class="card-list">
+                    <li class="foster-card card">
+                        <h3>What foster families provide</h3>
+                        <ul>
+                            <li>A safe, loving temporary home, usually for two to eight weeks</li>
+                            <li>Daily care, attention and gentle socialization</li>
+                            <li>Transportation to vet visits and adoption events, when possible</li>
+                        </ul>
+                    </li>
+                    <li class="foster-card card">
+                        <h3>What we provide</h3>
+                        <ul>
+                            <li>All food, supplies and veterinary care at no cost</li>
+                            <li>Training and a dedicated foster coordinator</li>
+                            <li>24/7 support for emergencies</li>
+                        </ul>
+                    </li>
                 </ul>
                 <p>No experience? No problem. We match fosters with animals that fit their home and comfort level.</p>
             </section>
-            <section id="volunteer">
+            <section id="volunteer"  class="feature card">
                 <h2>Volunteer Roles</h2>
-                <img src="images/rescue-volunteer_c.png" width="360" height="360" alt="young man in a volunteer t-shirt kneeling down and holding a happy shelter dog's paw">
-                <dl>
-                    <dt>Animal care assistant:</dt><dd>Help feed, clean, walk and socialize animals at our partner facilities. Shifts are about 2-3 hours.</dd>
-                    <dt>Adoption event helper:</dt><dd>Greet visitors, answer questions and help match families with pets at weekend events around the metro.</dd>
-                    <dt>Transport driver:</dt><dd>Drive animals to vet appointments, foster homes and adoption events. A valid driver's license and a reliable vehicle are required.</dd>
-                    <dt>Fundraising and outreach:</dt><dd>Plan events, staff community booths and help spread the word on social media.</dd>
-                </dl>
+                <div class="spotlight">
+                    <img src="images/rescue-volunteer_c.png" width="360" height="360" alt="young man in a volunteer t-shirt kneeling down and holding a happy shelter dog's paw">
+                    <dl>
+                        <dt>Animal care assistant</dt><dd>Help feed, clean, walk and socialize animals at our partner facilities. Shifts are about 2-3 hours.</dd>
+                        <dt>Adoption event helper</dt><dd>Greet visitors, answer questions and help match families with pets at weekend events around the metro.</dd>
+                        <dt>Transport driver</dt><dd>Drive animals to vet appointments, foster homes and adoption events. A valid driver's license and a reliable vehicle are required.</dd>
+                        <dt>Fundraising and outreach</dt><dd>Plan events, staff community booths and help spread the word on social media.</dd>
+                    </dl>
+                </div>
                 <p>Ready to get involved? <a href="contact.html">Fill out our volunteer interest form</a> and we'll be in touch within a few days.</p>
             </section>
         </main>
         <footer>
-            <hr>
             <p>&copy; 2026 Twin Cities Animal Rescue · A 501(c)(3) nonprofit organization · Minneapolis-St. Paul, Minnesota</p>
         </footer>
     </body>

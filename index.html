@@ -3,12 +3,16 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Twin Cities Animal Rescue | Home</title> 
+        <title>Twin Cities Animal Rescue | Home</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Inter:opsz,wght@14..32,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
         <header>
             <img src="images/rescue-logo_c.png" alt="Twin Cities Animal Rescue Logo" width="100" height="92">
-            <nav aria-label="Primary">
+            <nav class="primary-nav" aria-label="Primary">
                 <ul>
                     <li><a href="index.html" aria-current="page">Home</a></li>
                     <li><a href="about.html">About</a></li>
@@ -23,32 +27,43 @@
             <section>
                 <h2>Mission Statement</h2>
                 <p>We rescue, rehabilitate and rehome animals in need, and we build a community where every pet is safe, healthy and loved. Through adoption, fostering and education, we work toward a future where no adoptable animal is left without a home.</p>
-                <picture>
-                    <source srcset="images/rescue-feature-large_c.png" width="800" height="551" media="(min-width: 800px)">
+                <picture class="hero">
+                    <source srcset="images/rescue-feature-large_c.png" width="960" height="660" media="(min-width: 600px)">
                     <img src="images/rescue-feature-small_c.png" width="360" height="360" alt="man in a wheelchair smiling at his Bernese Mountain Dog on a sunny urban park path">
                 </picture>
             </section>
             <section>
                 <h2>Our Impact (2025)</h2>
-                <ul>
-                    <li>1,240 animals adopted into permanent homes</li>
-                    <li>310 active foster families</li>
-                    <li>18,500 volunteer hours contributed</li>
-                    <li>96% of rescued animals placed in homes</li>
-                    <li>42 community partners supporting our work</li>
+                <ul class="card-list" >
+                    <li class="stat-card card"><strong>1,240</strong><p>animals adopted</p></li>
+                    <li class="stat-card card"><strong>310</strong><p>active foster families</p></li>
+                    <li class="stat-card card"><strong>18,500</strong><p>volunteer hours contributed</p></li>
+                    <li class="stat-card card"><strong>96%</strong><p>of rescued animals placed</p></li>
+                    <li class="stat-card card"><strong>42</strong><p>community partners</p></li>
                 </ul>
             </section>
             <section>
                 <h2>How You Can Help</h2>
-                <ul>
-                    <li><strong>Adopt:</strong> Open your home to a pet who's ready for a fresh start. <a href="services.html#adoption">Learn about our adoption process</a>.</li>
-                    <li><strong>Foster:</strong> Give an animal a safe, temporary place to heal and grow while they wait for their family. <a href="services.html#foster">Explore the foster program</a>.</li>
-                    <li><strong>Volunteer:</strong> From animal care to adoption events, there's a role for every schedule and skill. <a href="services.html#volunteer">See volunteer roles</a>.</li>
+                <ul class="card-list">
+                    <li class="cta-card card">
+                        <h3>Adopt</h3>
+                        <p>Open your home to a pet who's ready for a fresh start.</p>
+                        <a class="cta-link" href="services.html#adoption">Learn about our adoption process</a>
+                    </li>
+                    <li class="cta-card card">
+                        <h3>Foster</h3>
+                        <p>Give an animal a safe, temporary place to heal and grow while they wait for their family.</p>
+                        <a class="cta-link" href="services.html#foster">Explore the foster program</a>
+                    </li>
+                    <li class="cta-card card">
+                        <h3>Volunteer</h3>
+                        <p>From animal care to adoption events, there's a role for every schedule and skill.</p>
+                        <a class="cta-link" href="services.html#volunteer">See volunteer roles</a>
+                    </li>
                 </ul>
             </section>
         </main>
         <footer>
-            <hr>
             <p>&copy; 2026 Twin Cities Animal Rescue · A 501(c)(3) nonprofit organization · Minneapolis-St. Paul, Minnesota</p>
         </footer>
     </body>
