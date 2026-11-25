@@ -11,6 +11,7 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Inter:opsz,wght@14..32,100..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/form.js" defer></script>
 </head>
 
 <body>
@@ -33,19 +34,22 @@
                     volunteer coordinator will reach out within three business days.</p>
                 <section>
                     <h2>Volunteer, Foster and Adoption Interest Form</h2>
-                    <form method="post" action="#">
+                    <form id="contact-form" method="post" action="#">
                         <fieldset class="card">
                             <legend>Contact Information</legend>
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" name="name" autocomplete="name" required>
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" autocomplete="email" required>
+                            <label>
+                                Full Name
+                                <input type="text" id="name" name="name" autocomplete="name" required>
+                            </label>
+                            <label for="email">
+                                Email Address
+                                <input type="email" id="email" name="email" autocomplete="email" required>
+                            </label>
                         </fieldset>
                         <fieldset class="card">
                             <legend>How would you like to help?</legend>
-                            <div class="options">
-                                <label><input type="radio" name="interest" value="volunteering" required>
-                                    Volunteering</label>
+                            <div class="options" id="interest-list">
+                                <label><input type="radio" name="interest" value="volunteering"> Volunteering</label>
                                 <label><input type="radio" name="interest" value="fostering"> Fostering</label>
                                 <label><input type="radio" name="interest" value="adoption"> Adoption</label>
                                 <label><input type="radio" name="interest" value="partnering"> Partnering</label>
@@ -54,7 +58,7 @@
                         </fieldset>
                         <fieldset class="card">
                             <legend>When are you available?</legend>
-                            <div class="options">
+                            <div class="options" id="available-list">
                                 <label>
                                     <input type="checkbox" name="available" value="weekday_am"> Weekday Mornings
                                 </label>
@@ -71,21 +75,25 @@
                         </fieldset>
                         <fieldset class="card">
                             <legend>Tell us about yourself</legend>
-                            <label for="experience">Experience with pets:</label>
-                            <select id="experience" name="experience" required>
-                                <option value="">-- Select an option --</option>
-                                <option value="none">None yet, but eager to learn</option>
-                                <option value="some">Some, such as owning a family pet</option>
-                                <option value="lots">Extensive, such as fostering, shelter work or professional care
-                                </option>
-                            </select>
-                            <label for="message">Anything else you'd like us to know?</label>
-                            <p id="message-hint" class="hint">Optional, up to 500 characters. For example, other pets in
-                                your home or roles you're interested in.</p>
-                            <textarea id="message" name="message" rows="5" cols="40" maxlength="500"
-                                aria-describedby="message-hint"></textarea>
+                            <label>
+                                Experience with pets:
+                                <select id="experience" name="experience" required>
+                                    <option value="">-- Select an option --</option>
+                                    <option value="none">None yet, but eager to learn</option>
+                                    <option value="some">Some, such as owning a family pet</option>
+                                    <option value="lots">Extensive, such as fostering, shelter work or professional care
+                                    </option>
+                                </select>
+                            </label>
+                            <label>
+                                Anything else you'd like us to know?
+                                <span id="message-hint" class="hint">Optional, up to 500 characters. For example, other pets in
+                                    your home or roles you're interested in.</span>
+                                <textarea id="message" name="message" rows="5" cols="40" maxlength="500"
+                                    aria-describedby="message-hint"></textarea>
+                            </label>
                         </fieldset>
-                        <button type="submit" class="submit-btn">Send Message</button>
+                        <button type="submit" id="submit-btn" class="submit-btn">Send Message</button>
                     </form>
                 </section>
             </div>

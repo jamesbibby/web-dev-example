@@ -8,11 +8,13 @@
 }
 
 html {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-*, *::before, *::after {
-  box-sizing: inherit;
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
 }
 
 body {
@@ -91,7 +93,12 @@ a:focus-visible {
     }
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--font-heading);
     font-weight: 600;
 }
@@ -101,7 +108,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 img {
-    max-width: 100%; 
+    max-width: 100%;
     height: auto;
 }
 
@@ -205,7 +212,7 @@ summary {
 }
 
 .stat-card p {
-    text-align: center; 
+    text-align: center;
     margin: 0;
 }
 
@@ -262,55 +269,11 @@ summary {
     margin: 0;
 }
 
-/* Spotlight Feature */
-
-.feature h2 {
-    margin: 0 0 0.75rem 0;
-}
-
-.feature p {
-    margin: 0.75rem 0 0 0;
-}
-
-.spotlight {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin: 0;
-}
-
-.spotlight figcaption {
-    flex: 1;
-}
-
-.spotlight p {
-    margin: 0;
-}
-
-.spotlight img {
-    width: 100%;
-}
-
-.spotlight h3 {
-    font-size: 1.5em;
-    margin: 0 0 0.5rem 0;
-}
-
-@media (min-width: 768px) {
-    .spotlight {
-        flex-direction: row;
-    }
-    .spotlight img {
-        width: 300px;
-        height: 300px;
-    }
-}
-
 /* Forms and Fields */
 
 .split-page {
-    display:flex; 
-    flex-direction: column; 
+    display: flex;
+    flex-direction: column;
     gap: 1em;
 }
 
@@ -321,8 +284,8 @@ summary {
 }
 
 .info-panel {
-    gap: 1em; 
-    display:flex; 
+    gap: 1em;
+    display: flex;
     flex-direction: column;
 }
 
@@ -341,20 +304,50 @@ form {
     gap: 1.5em;
 }
 
-input, select, textarea, button {
+input,
+select,
+textarea,
+button {
     font: inherit;
     color: inherit;
 }
 
-input[type="text"], input[type="email"], select, textarea {
+input[type="text"],
+input[type="email"],
+select,
+textarea {
     width: 100%;
     padding: 0.5rem;
     border: 1px solid var(--charcoal);
     margin-bottom: 1em;
 }
 
-input[type="text"]:focus-visible, input[type="email"]:focus-visible, select:focus-visible, textarea:focus-visible {
+input[type="text"]:focus-visible,
+input[type="email"]:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
     outline: 3px solid var(--burnt-orange);
+}
+
+/* error messages */
+
+label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+label:has(:user-invalid)::after,
+form.was-validated label:has(:invalid)::after {
+    content: attr(data-error);
+    color: var(--burnt-orange);
+    font-size: 0.875rem;
+}
+
+label:has(:user-invalid) input,
+form.was-validated label:has(:invalid) input {
+    border: 2px solid var(--burnt-orange);
 }
 
 fieldset {
@@ -406,13 +399,13 @@ legend {
 }
 
 .submit-btn:hover {
-  background-color: var(--charcoal);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    background-color: var(--charcoal);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .submit-btn:active {
-  transform: translateY(1px);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    transform: translateY(1px);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 /* Sidebar / Info Boxes */
@@ -426,7 +419,8 @@ legend {
     margin-bottom: 0.75em;
 }
 
-.schedule th, .schedule td {
+.schedule th,
+.schedule td {
     padding: 0.75em;
     border: 1px solid var(--charcoal);
 }
@@ -434,4 +428,100 @@ legend {
 address {
     font-style: normal;
     line-height: 1.25;
+}
+
+/* Spotlight Feature */
+
+.feature h2 {
+    margin: 0 0 0.75rem 0;
+}
+
+.feature p {
+    margin: 0.75rem 0 0 0;
+}
+
+.spotlight {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 0;
+}
+
+.spotlight figcaption {
+    flex: 1;
+}
+
+.spotlight p {
+    margin: 0;
+}
+
+.spotlight img {
+    width: 100%;
+}
+
+.spotlight h3 {
+    font-size: 1.5em;
+    margin: 0 0 0.5rem 0;
+}
+
+@media (min-width: 768px) {
+    .spotlight {
+        flex-direction: row;
+    }
+
+    .spotlight img {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+/* Carousel */
+
+.carousel {
+    align-items: center;
+}
+
+.carousel-controls {
+    margin-top: 1em;
+    display: flex;
+    gap: 2em;
+    align-items: center;
+}
+
+.slides {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+}
+
+.slide {
+    grid-area: 1/1;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1.5s ease-in-out, visibility 1.5s;
+}
+
+.slide.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.dots {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.dots button {
+    width: 24px;
+    height: 24px;
+    border: 1px solid var(--charcoal);
+    background: var(--white);
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.dots button.active {
+    background: var(--burnt-orange);
 }
